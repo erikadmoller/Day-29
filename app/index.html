@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="basic" class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Day 29</title>
+   <!--  <link rel="stylesheet" href="styles/reset.css"> -->
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <div ng-controller="BasicCtrl" class="hero-unit">
+      <div class="header">
+        <h2 class="page-name">States</h2>
+        <input type="text" class="filter-box" ng-model="filterBox" placeholder="Filter">
+      </div>
+
+      <table>
+                <tr class="header-row">
+                    <th class="col1">Title</th>
+                    <th class="col2">Year</th>
+                    <th class="col3">Wikipedia Link</th>
+                </tr>
+                <tr ng-repeat="objects in states" ng-model="statesModel">
+                    <td class="col1">{{ objects.name }}</td>
+                    <td class="col2">{{ objects.abbreviation }}</td>
+                    <td class="col3">
+                      <a ng-href="http://en.wikipedia.org/wiki/{{ objects.name }}">Link</a>
+                    </td>
+                </tr>
+      </table>
+
+    </div>
+
+    <!-- bower installs -->
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/lodash/lodash.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+
+    <!-- links to scripts -->
+
+    <script type="text/javascript" src="scripts/services/services.js"></script>
+    <script type="text/javascript" src="scripts/controllers/controllers.js"></script>
+    <script type="text/javascript" src="scripts/my-app/app.js"></script>
+</body>
+</html>
