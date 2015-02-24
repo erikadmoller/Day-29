@@ -11,7 +11,6 @@ angular.module('basic.controllers', ['basic.services'])
 
 				console.log(i);
 				console.log(response[i]);
-				// console.log(response[i].imgURL);
 
 					if(response[i].name && response[i].abbreviation) {
 						$scope.states.push(response[i]);
@@ -20,5 +19,16 @@ angular.module('basic.controllers', ['basic.services'])
 			}
 
 		})
+
+	// $scope.Sort= Sort;
+
+	// $scope.sortUp = function() {
+	// 	console.log(Sort);
+	// }
+
+	// var resultArray1 = _.sortBy(states, function(element) {
+	// 		// return element.name;
+	// 		// return 'Running a test';
+	// 	})
 
 });
