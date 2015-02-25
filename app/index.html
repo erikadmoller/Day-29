@@ -5,8 +5,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Day 29</title>
-   <!--  <link rel="stylesheet" href="styles/reset.css"> -->
+<!--     <link rel="stylesheet" href="styles/reset.css">
+ -->   
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <script src="/bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
@@ -18,14 +20,14 @@
 
       <table>
                 <tr class="header-row">
-                    <th class="col1">
+                    <th ng-click="titleClick()" class="col1">
                     Title
-                    <button ng-click="sortUp()">Sort</button>
+                      <div class="ion-arrow-up-b"></div>
                     </th>
-                    <th class="col2">Year</th>
+                    <th ng-click="abbClick()" class="col2">Abbreviations</th>
                     <th class="col3">Wikipedia Link</th>
                 </tr>
-                <tr ng-repeat="objects in states" ng-model="statesModel">
+                <tr ng-repeat="objects in newArray" ng-model="statesModel">
                     <td class="col1">{{ objects.name }}</td>
                     <td class="col2">{{ objects.abbreviation }}</td>
                     <td class="col3">
