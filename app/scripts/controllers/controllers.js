@@ -2,9 +2,9 @@ angular.module('basic.controllers', ['basic.services'])
 .controller('BasicCtrl', function($scope, $http) {
 
 	$scope.filterBox = '';
-	// $scope.sortButton = true;
 	$scope.reverseArray = [];
-
+	$scope.stateArrow = true;
+	$scope.abbArrow = true;
 
 	function getRequest() {
 
@@ -27,26 +27,38 @@ angular.module('basic.controllers', ['basic.services'])
 
 
 	$scope.titleClick = function() {
-		console.log($scope.titleClick);
 
-		$scope.reverseArray = $scope.newArray;
-		$scope.newArray = $scope.reverseArray.reverse();
-		
+			if($scope.stateArrow) {
+				$scope.stateArrow = false;
+				$scope.reverseArray = $scope.newArray;
+				$scope.newArray = $scope.reverseArray.reverse();
+
+			} else if($scope.stateArrow === false) {
+				$scope.stateArrow = true;
+				$scope.reverseArray = $scope.newArray;
+				$scope.newArray = $scope.reverseArray.reverse();
+			}
+
 		};
 
 	$scope.abbClick = function() {
 
-		$scope.states = _.sortBy($scope.states, function(element) {
-				return element.abbreviation + element.name;
-			});
+		if($scope.abbArrow) {
+				$scope.abbArrow = false;
+				$scope.reverseArray = $scope.newArray;
+				$scope.newArray = $scope.reverseArray.reverse();
+
+			} else if($scope.abbArrow === false) {
+				$scope.abbArrow = true;
+				$scope.reverseArray = $scope.newArray;
+				$scope.newArray = $scope.reverseArray.reverse();
+			}
 
 	};
 
 // filter expects and array and a function and if function returns true, than the element will return, and return false it gets removed
 
 	$scope.$watch('filterBox', function() {
-
-
 
 		$scope.newArray = _.filter($scope.states, function(element) {
 			console.log(element.name.toLowerCase());

@@ -1,52 +1,74 @@
 @import 'reset';
 
+body {
+	background-color: #ddd;
+	margin-bottom: 4em;
+}
+
+table {
+	margin: 0 auto;
+	width: 50em;
+	border: 10px solid #ccc;
+}
+
 .header-row {
 	height: 2em;
 	background-color: #ddd;
-
 }
 
-.ion-arrow-up-b:before { 
-	font-size: 1em;
-	background-color: #red;
+.arrow-wrapper {
+	width: 1em;
+	display: inline-block;
+}
+
+tr:nth-child(even){
+	background-color: #9ECFFF;
+}
+
+tr:nth-child(odd){
+	background-color: #ffffff;
 }
 
 .col1 {
 	width: 10em;
-	padding-top: 0.5em;
 	text-align: left;
 	padding-left: 1em;
+	padding: 1em;
 }
 
 .col2 {
 	width: 10em;
 	text-align: left;
-	padding-left: 1em;
 }
 
 .col3 {
 	width: 10em;
 	text-align: left;
-	padding-left: 1em;
+}
+
+.header-wrapper {
+	width: 30em;
+	margin: 0 auto;
 }
 
 .header {
-	height: 2em;
-	background-color: #ccc;
+	height: 5em;
+	background-color: #818182;
 }
 
 .page-name {
 	float: left;
-	margin-left: 3em;
-	margin-top: 0.5em;
+	// margin-left: 3em;
+	margin-top: 0.4em;
+	font-size: 3em;
+	color: white;
 }
 
 .filter-box {
 	float: right;
-	height: 2em;
-	width: 15em;
-	margin-right: 5em;
-	margin-top: 0.2em;
+	height: 3em;
+	width: 18em;
+	margin-top: 2em;
 	border: 1px solid #aaa;
 }
 

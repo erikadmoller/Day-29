@@ -14,20 +14,31 @@
   <body>
     <div ng-controller="BasicCtrl" class="hero-unit">
       <div class="header">
-        <h2 class="page-name">States</h2>
-        <input type="text" class="filter-box" ng-model="filterBox" placeholder="Filter">
+        <div  class="header-wrapper">
+          <h2 class="page-name">States List</h2>
+          <input type="text" class="filter-box" ng-model="filterBox" placeholder="Filter">
+        </div>
       </div>
 
       <table>
                 <tr class="header-row">
                     <th ng-click="titleClick()" class="col1">
                     Title
-                      <div class="ion-arrow-up-b"></div>
+                    <div class="arrow-wrapper">
+                      <div ng-show="stateArrow" class="ion-arrow-down-b"></div>
+                      <div ng-hide="stateArrow" class="ion-arrow-up-b"></div>
+                    </div>
                     </th>
-                    <th ng-click="abbClick()" class="col2">Abbreviations</th>
+                    <th ng-click="abbClick()" class="col2">
+                    Abbreviations
+                    <div class="arrow-wrapper">
+                      <div ng-show="abbArrow" class="ion-arrow-down-b"></div>
+                      <div ng-hide="abbArrow" class="ion-arrow-up-b"></div>
+                    </div>
+                    </th>
                     <th class="col3">Wikipedia Link</th>
                 </tr>
-                <tr ng-repeat="objects in newArray" ng-model="statesModel">
+                <tr class="rows" ng-repeat="objects in newArray">
                     <td class="col1">{{ objects.name }}</td>
                     <td class="col2">{{ objects.abbreviation }}</td>
                     <td class="col3">
