@@ -34,27 +34,31 @@ tr:nth-child(odd){
 	text-align: left;
 	padding-left: 1em;
 	padding: 1em;
+	font-size: 1.2em;
 }
 
 .col2 {
 	width: 10em;
 	text-align: left;
+	font-size: 1.2em;
 }
 
 .col3 {
 	width: 10em;
 	text-align: left;
+	font-size: 1.2em;
 }
 
 .header-wrapper {
 	width: 30em;
-	margin: 0 auto;
+	margin: 0 0 0 14em;
 }
 
 .header {
 	height: 5em;
 	background-color: #818182;
 }
+
 
 .page-name {
 	float: left;
@@ -68,7 +72,8 @@ tr:nth-child(odd){
 	float: right;
 	height: 3em;
 	width: 18em;
-	margin-top: 2em;
+	font-size: 0.8em;
+	margin-top: 1.4em;
 	border: 1px solid #aaa;
 }
 

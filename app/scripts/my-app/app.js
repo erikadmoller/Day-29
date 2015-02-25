@@ -1,3 +1,4 @@
 angular.module('basic', [
-		'basic.controllers'
+		'basic.controllers',
+		'basic.services'
 	])
