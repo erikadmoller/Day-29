@@ -61,9 +61,9 @@ angular.module('basic.controllers', ['basic.services'])
 	$scope.$watch('filterBox', function() {
 
 		$scope.newArray = _.filter($scope.states, function(element) {
-			console.log(element.name.toLowerCase());
-			console.log($scope.filterBox.toLowerCase());
-			return element.name.toLowerCase().indexOf($scope.filterBox.toLowerCase()) === 0;
+			// console.log(element.name.toLowerCase());
+			// console.log($scope.filterBox.toLowerCase());
+			return element.name.toLowerCase().indexOf($scope.filterBox.toLowerCase()) === 0 || element.abbreviation.toLowerCase().indexOf($scope.filterBox.toLowerCase()) === 0
 
 		});
 		console.log($scope.newArray);
